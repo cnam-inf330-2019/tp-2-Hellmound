@@ -11,11 +11,14 @@ import static org.junit.Assert.*;
 public class AirportSimulatorTest {
 
     // TODO 2. Write a method for testing the PriorityQueue
-    public void compareTest(){
+    public void compareTest() {
         Plane a = new NormalPlane(0, "a", false, 0);
         Plane b = new NormalPlane(0, "b", false, 1);
-        Plane result = compare(a, b);
-        assert(a, result);
+
+        // FIXME Put planes in the PriorityQueue and test the ordering
+        //Plane result = compare(a, b);
+        //assert(a, result);
+        assert (false);
 
     }
 
@@ -30,15 +33,13 @@ public class AirportSimulatorTest {
         //assertThrows(...);
         assertThrows(fuelCapacityException.class, tr);
 
+        /* FIXME Unnecessary code
         try {
             simulator.createPlane(-1, false);
         }catch (fuelCapacityException e){
             assert(fuelCapacityException.class, e);
         }
-
-
-    };
-
+*/
 
     }
 
@@ -56,7 +57,7 @@ public class AirportSimulatorTest {
         simulator.simulateTurnWithNewPlanes(2, 3, new int[]{6, 2, 0});
         simulator.simulateTurnWithNewPlanes(1, 3, new int[]{0, 0, 0});
 
-        // TODO 7. Test that scenario 1 does not cause any plane crashes
+        // TODO FIXME 7. Test that scenario 1 does not cause any plane crashes
         // assert...
     }
 }
